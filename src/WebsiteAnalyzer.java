@@ -11,7 +11,7 @@ class WebsiteAnalyzer {
 	// Maintaining a map of page url and access counts
 	private static Map<String, Integer> pageMap = new HashMap<String, Integer>();
 
-	public void reportPageAccess(String pageUrl) {
+	public static void reportPageAccess(String pageUrl) {
 		// Since this operation will be called very frequently, just
 		// incrementing the page access count here, no extra computation
 		Integer count = pageMap.get(pageUrl);
@@ -22,7 +22,7 @@ class WebsiteAnalyzer {
 	}
 
 	// This API should be synchronized
-	public List<String> getTopNPages(int n) {
+	public static List<String> getTopNPages(int n) {
 		// Since this operation will be called less frequently, doing all
 		// computation here
 		List<String> l = new ArrayList<>();

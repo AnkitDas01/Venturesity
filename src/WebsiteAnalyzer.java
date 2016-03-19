@@ -9,7 +9,7 @@ import java.util.Map.Entry;
 class WebsiteAnalyzer {
 
 	// Maintaining a map of page url and access counts
-	private Map<String, Integer> pageMap = new HashMap<String, Integer>();
+	private static Map<String, Integer> pageMap = new HashMap<String, Integer>();
 
 	public void reportPageAccess(String pageUrl) {
 		// Since this operation will be called very frequently, just
